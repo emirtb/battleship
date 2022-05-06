@@ -1,0 +1,32 @@
+body{
+    text-align: center;
+}
+table.viewBoats td.used
+{
+    background-color: black;
+}
+table {
+    padding: 0;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+// table.viewBoats td.used{
+//     background-color: white;
+// }
+table.viewBoats td.disabled{
+background-color: grey;
+}
+table.tabla td.disabled{
+    background-color: grey;
+}
+table.tabla  td.destroyed
+{
+    background-color: red;
+}
+.tabla{
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    border-color: black;
+}

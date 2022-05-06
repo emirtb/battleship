@@ -1,0 +1,24 @@
+
+
+<br>
+<button (click)="startPlay()">Iniciar juego</button>
+<br>
+<br>
+<span *ngIf="limiteTurnos > 0"> Turnos <strong>{{turnosUsados}}</strong> de {{limiteTurnos}} </span>
+<br>
+
+<p *ngIf="gameFinished">Juego terminado</p>
+<p *ngIf="gameFinished && perdido == true">Perdiste :( </p>
+<p *ngIf="gameFinished && perdido == false"> ¡Ganaste!</p>
+<p *ngIf="gameFinished && perdido == false && limiteTurnos == 0"> Bueno, sin límite de intentos</p>
+<table cellspacing="0" [ngClass]="getTableClass()" *ngIf="board != null" >
+
+<tr *ngFor="let row of board.rowsT">
+   
+    <td *ngFor="let cell of row" (click)="test(cell)" [ngClass]="{ disabled: cell.enabled == false, destroyed: cell.isDestroyed, used: cell.isUsed() }">
+
+    </td>
+  </tr>
+</table>
+<br>
+<button (click)="viewBoats()" *ngIf="playStarted" >Ver barcos</button>

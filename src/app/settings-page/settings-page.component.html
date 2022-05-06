@@ -1,0 +1,15 @@
+<p>settings-page works!</p>
+Número de intentos
+<select #level name="predeterminado" (change)="onChange(level.value)" >
+    <option [value]="0">Fácil</option>
+    <option [value]="100">Medio</option>
+    <option [value]="50">Difícil</option>
+
+</select>
+<br>
+Si es "0" es infinito
+<br>
+<input name="turnos" type="text"  [(ngModel)]="turnos"  value="0"  />
+<br>
+
+<button (click)="setLevel()">Aplicar</button>
